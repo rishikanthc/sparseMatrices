@@ -38,19 +38,6 @@ void fullMatrixMult(int layer, double vec[], double out[], int n, int m){
 
  }
 
-void opMatrixMult(int layer, double vec[], double out[], int n) {
-	if (layer == 0)
-		for (int i = 0; i < n; i++) {
-			out[i] = fweight0[i][0] * vec[0] + fweight0[i][1] * vec[1] + fweight0[i][2] * vec[2] + fweight0[i][3] * vec[3];
-		}
-	else
-		for (int i = 0; i < n; i++) {
-			out[i] = fweight1[i][0] * vec[0] + fweight1[i][1] * vec[1] + fweight1[i][2] * vec[2] + fweight1[i][3] * vec[3];
-		}
-
-
-}
-
 int main(int argc, char ** argv)
 {
    /*double Val[] = {11, 12, 14, 22, 23, 25, 31, 33, 34, 42, 45,
