@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "sparseWeights.h"
+//#include "sparseWeights.h"
 #include <string.h>
 
 void MatrixVectorMult(double out[], double Val[], int RowPtr[], int Col[],

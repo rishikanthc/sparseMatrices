@@ -60,7 +60,7 @@ def genSparse(m, n, nz):
     return matx, fullmat
     
 if __name__ == '__main__':
-    fp = open('sparseWeights.h', 'w')
+    fp = open('../decisionTrees/sparseMatrices/src/sparseWeights.h', 'w')
     fp.write("#define WSIZE " + str(sys.argv[1]) + '\n')
     fp.write("#define VECSIZE " + str(4) + '\n')
     w0, wf0 = genSparse(int(sys.argv[1]), 4, int(sys.argv[2]))
