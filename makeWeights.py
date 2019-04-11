@@ -1,6 +1,7 @@
 import sys
 from scipy import sparse
 import numpy as np
+import copy
 
 DATASTRING = "double Val"
 ARRSTRING = "[] = {"
@@ -46,7 +47,7 @@ def writeFullWeights(fp, fullmat, idx):
 
 def genSparse(m, n, nz):
     matx = np.random.rand(m, n)
-    fullmat = matx
+    fullmat = copy.deepcopy(matx)
 
     sp = int(m * n * nz / 100)
     for i in range(sp):
